@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: policy-service
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+server:
+  port: 8081
