@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
@@ -55,11 +56,11 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
 
     public boolean isRestrictedEndPoint(String path,List<String> roles){
      List<String> adminApis = Arrays.asList(
-             "/admin/add","/admin/update"
+             "/policy"
      );
 
      List<String> userApis = Arrays.asList(
-             "/policy/getInfo"
+             "/policy/getInfo","/policy/getItemByCategory"
      );
 
      for(String adminUri : adminApis){
