@@ -8,6 +8,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: harshadeveloper.999@gmail.com
+    password: aiyskmpbwonqrvlg
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 
 server:

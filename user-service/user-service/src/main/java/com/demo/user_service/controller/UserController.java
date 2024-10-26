@@ -5,6 +5,7 @@ import com.demo.user_service.Model.LoginModel;
 import com.demo.user_service.Model.UserModel;
 import com.demo.user_service.service.AuthService;
 import com.demo.user_service.service.UserService;
+import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,12 +27,14 @@ public class UserController {
     private AuthService authService;
 
     @PostMapping(value = "/register")
-    public ResponseEntity<?> RegisterUser(@RequestBody @Valid UserModel userModel) {
+    public ResponseEntity<?> RegisterUser(@RequestBody @Valid UserModel userModel) throws MessagingException {
         UserResDTO userResDTO = userService.addUser(userModel);
-        if (userResDTO != null)
+        if (userResDTO != null) {
+
             return ResponseEntity.status(200).body(userResDTO);
-        else
+        } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Registration Unsuccessfull");
+        }
     }
 
     @PostMapping("/login")
