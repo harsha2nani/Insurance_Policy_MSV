@@ -1,5 +1,5 @@
 spring:
+  config:
+    import: configserver:http://localhost:9095
   profiles:
     active: user,user-dev
-  config:
-    import: configserver:http://localhost:9090

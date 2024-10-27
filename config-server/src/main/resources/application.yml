@@ -5,10 +5,14 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/harsha2nani/Insurance_Policy_MSV/tree/main/Insurance-Config
+          uri: https://github.com/harsha2nani/Insurance_Policy_MSV
           default-label: main
           search-paths:
-            - Environments
+            - Insurance-Config
+            - Insurance-Config/Environments
+            - Insurance-user-service/user-service
+            - Insurance-user-service/user-service/Environments
+
 server:
-  port: 9090
+  port: 9095
 

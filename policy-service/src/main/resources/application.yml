@@ -1,5 +1,5 @@
 spring:
+  config:
+    import: configserver:http://localhost:9095
   profiles:
     active: policy,policy-dev
-  config:
-    import: configserver:http://localhost:9090
