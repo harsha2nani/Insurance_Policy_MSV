@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: policy-service-dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/hip_db
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081

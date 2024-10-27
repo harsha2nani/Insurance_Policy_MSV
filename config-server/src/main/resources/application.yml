@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/harsha2nani/Insurance_Policy_MSV/tree/main/Insurance-Config
+          default-label: main
+          search-paths:
+            - Environments
+server:
+  port: 9090
+

@@ -10,3 +10,11 @@ spring:
           auth: true
           starttls:
             enable: true
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+    register-with-eureka: true
+    fetch-registry: true
